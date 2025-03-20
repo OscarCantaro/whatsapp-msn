@@ -1,11 +1,23 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BulkMessenger from '../components/BulkMessenger';
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envío Masivo WhatsApp</title>
+</head>
+<body class="bg-gray-200 min-h-screen p-4">
+  <main class="bg-sky-100 max-w-5xl mx- rounded-lg p-8 mx-auto shadow-lg">
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl font-bold text-gray-800 mb-2">Envío Masivo WhatsApp</h1>
+      <p class="text-gray-600">Carga tu archivo Excel y envía mensajes personalizados</p>
+    </header>
+    
+    <BulkMessenger client:load />
+  </main>
+</body>
+</html>
